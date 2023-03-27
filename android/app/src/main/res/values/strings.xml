@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">appTarea</string>
+    <string name="title_activity_main">appTarea</string>
+    <string name="package_name">com.appTarea.app</string>
+    <string name="custom_url_scheme">com.appTarea.app</string>
+</resources>

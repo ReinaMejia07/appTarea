@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>menu</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-img src="../../assets/logo.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center" style="color: rgb(247, 193, 93);">Bienvenido a nuestra Api Comida</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <br><br><br>
+  <ion-label><h1 style="color: rgb(95, 184, 117);" class="ion-text-center">Elije tu bebida</h1></ion-label>
+  <ion-radio-group [(ngModel)]="m1" Name="m1" (ionChange)="checkm1()">
+    <ion-item><ion-radio Name="m1" value="1"></ion-radio><ion-label>1. Café</ion-label></ion-item>
+    <ion-item><ion-radio Name="m1" value="2"></ion-radio><ion-label>2. Coca Cola</ion-label></ion-item>
+    <ion-item><ion-radio Name="m1" value="3"></ion-radio><ion-label>3. Refresco natural</ion-label></ion-item>
+    <ion-item><ion-radio Name="m1" value="4"></ion-radio><ion-label>4. Agua</ion-label></ion-item>
+    <ion-item><ion-radio Name="m1" value="5"></ion-radio><ion-label>5. Frozen</ion-label></ion-item>
+  </ion-radio-group>
+  <ion-label ><h1 style="color: rgb(95, 184, 117);" class="ion-text-center">Total de bebida</h1></ion-label>
+  <ion-input [(ngModel)]="result1" class="ion-text-center"></ion-input>
+
+  <br><br><br>
+  <ion-label ><h1 style="color: rgb(95, 184, 117);" class="ion-text-center">Elije tu comida</h1></ion-label>
+  <ion-radio-group [(ngModel)]="m2" Name="m2" (ionChange)="checkm2()">
+    <ion-item><ion-radio Name="m2" value="1"></ion-radio><ion-label>1. Combo de Pupusas</ion-label></ion-item>
+    <ion-item><ion-radio Name="m2" value="2"></ion-radio><ion-label>2. Hamburguesa + papa</ion-label></ion-item>
+    <ion-item><ion-radio Name="m2" value="3"></ion-radio><ion-label>3. Pollo frito</ion-label></ion-item>
+    <ion-item><ion-radio Name="m2" value="4"></ion-radio><ion-label>4. Tacos</ion-label></ion-item>
+    <ion-item><ion-radio Name="m2" value="5"></ion-radio><ion-label>5. Hot Dog</ion-label></ion-item>
+  </ion-radio-group>
+  <ion-label ><h1 style="color: rgb(95, 184, 117);" class="ion-text-center">Total de comida</h1></ion-label>
+  <ion-input [(ngModel)]="result2" class="ion-text-center"></ion-input>
+
+  <br><br><br>
+  <ion-label ><h1 style="color: rgb(95, 184, 117);" class="ion-text-center">Elije tu postre</h1></ion-label>
+  <ion-radio-group [(ngModel)]="m3" Name="m3" (ionChange)="checkm3()">
+    <ion-item><ion-radio Name="m3" value="1"></ion-radio><ion-label>1. Pie de manzana</ion-label></ion-item>
+    <ion-item><ion-radio Name="m3" value="2"></ion-radio><ion-label>2. Semita</ion-label></ion-item>
+    <ion-item><ion-radio Name="m3" value="3"></ion-radio><ion-label>3. Porción de pastel</ion-label></ion-item>
+    <ion-item><ion-radio Name="m3" value="4"></ion-radio><ion-label>4. Sorbete</ion-label></ion-item>
+    <ion-item><ion-radio Name="m3" value="5"></ion-radio><ion-label>5. Crepas</ion-label></ion-item>
+  </ion-radio-group>
+  <ion-label ><h1 style="color: rgb(95, 184, 117);" class="ion-text-center">Total de postre</h1></ion-label>
+  <ion-input [(ngModel)]="result3" class="ion-text-center"></ion-input>
+
+  <ion-label><h1 class="ion-text-center">Total a cancelar : </h1></ion-label>
+  <ion-input [(ngModel)]="total" class="ion-text-center"></ion-input>
+
+</ion-content>
